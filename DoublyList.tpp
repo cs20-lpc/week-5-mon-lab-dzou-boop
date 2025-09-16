@@ -30,7 +30,12 @@ DoublyList<T>::~DoublyList() {
 
 template <typename T>
 void DoublyList<T>::append(const T& elem) {
-    // TO DO: Implement the code for the append
+    Node *curr = trailer;
+    Node *newNode = new Node;
+    newNode->value = elem;
+
+    newNode->prev = trailer; 
+    trailer->next = newNode;
 
 }
 
