@@ -37,6 +37,9 @@ void DoublyList<T>::append(const T& elem) {
     newNode->prev = trailer; 
     trailer->next = newNode;
 
+    newNode->next = nullptr;
+    trailer = newNode;
+
 }
 
 template <typename T>
