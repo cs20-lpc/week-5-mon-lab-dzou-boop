@@ -100,7 +100,7 @@ void DoublyList<T>::insert(int position, const T& elem) {
   Node *newNode = new Node();
   newNode->value = elem;
 
-  if (position != 0) {curr->next = newNode;} else {curr->prev = newNode;}
+  if (position != 0) {curr->next = newNode;} else {curr->prev = newNode; header = newNode;}
 
   if (position != this->length - 1) {nextCurr->prev = newNode}
 }
