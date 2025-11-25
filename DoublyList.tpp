@@ -102,7 +102,7 @@ void DoublyList<T>::insert(int position, const T& elem) {
 
   if (position != 0) {curr->next = newNode;}
 
-  if (position != this->length - 1) {nextCurr->prev = newNode;}
+  if (position != this->length - 1) {nextCurr->prev = newNode}
 }
 
 template <typename T>
