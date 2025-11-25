@@ -75,6 +75,12 @@ void DoublyList<T>::copy(const DoublyList<T>& copyObj) {
 template <typename T>
 T DoublyList<T>::getElement(int position) const {
     // TO DO: Implent code for getElement at position
+    Node* curr = header;
+    for (int i = 0; i < position; i++) {
+        curr = curr->next;
+    }
+
+    return curr->value;
 }
 
 template <typename T>
@@ -86,6 +92,8 @@ int DoublyList<T>::getLength() const {
 template <typename T>
 void DoublyList<T>::insert(int position, const T& elem) {
   // TO DO: Implement code to insert an element to list
+  Node *curr = header;
+  for (int i = 0)
 }
 
 template <typename T>
