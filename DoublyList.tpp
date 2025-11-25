@@ -93,7 +93,16 @@ template <typename T>
 void DoublyList<T>::insert(int position, const T& elem) {
   // TO DO: Implement code to insert an element to list
   Node *curr = header;
-  for (int i = 0)
+  for (int i = 0; i < position - 1; i++) {
+    curr = curr->next;
+  }
+  Node *nextCurr = curr->next;
+  Node *newNode = new Node();
+  newNode->value = elem;
+
+  if (position != 0) {curr->next = newNode;}
+
+  if (position != this->length - 1) {nextCurr->prev = newNode;}
 }
 
 template <typename T>
